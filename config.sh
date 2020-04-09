@@ -18,7 +18,10 @@ getProjectName() {
 }
 
 getHTTPSRepo() {
-    read -p "Enter HTTPS Repo URL: " httpsRepo
+# 直接赋值，也可以自己输入，如果要自己输入，注释下一行
+    httpsRepo=https://github.com/G-Crux/${projectName}.git
+# 如果要自己输入，打开下一行
+#    read -p "Enter HTTPS Repo URL: " httpsRepo
 
     if test -z "$httpsRepo"; then
         getHTTPSRepo
@@ -26,7 +29,8 @@ getHTTPSRepo() {
 }
 
 getSSHRepo() {
-    read -p "Enter SSH Repo URL: " sshRepo
+    sshRepo=git@github.com:G-Crux/${projectName}.git
+#    read -p "Enter SSH Repo URL: " sshRepo
 
     if test -z "$sshRepo"; then
         getSSHRepo
@@ -34,7 +38,8 @@ getSSHRepo() {
 }
 
 getHomePage() {
-    read -p "Enter Home Page URL: " homePage
+    homePage=https://github.com/G-Crux/${projectName}.git
+#    read -p "Enter Home Page URL: " homePage
 
     if test -z "$homePage"; then
         getHomePage
